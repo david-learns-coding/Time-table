@@ -15,7 +15,7 @@ SAVE_BTN.addEventListener("click", () => {
 
 	localStorage.setItem(CACHE_NAME, JSON.stringify(allData));
 
-	SAVE_BTN.style.visibility = "hidden";
+	
 
 });
 
