@@ -1,0 +1,23 @@
+#save_btn {
+
+    position: absolute ;
+    top: 1rem ;
+    right : 1rem ;
+    padding: 5px  ;
+    margin: 2px ;
+    border : none ;
+    background: #cfcfcf ;
+    border-radius: 0% ;
+}
+
+tbody {
+    height : 70% ;
+    border-color: aliceblue;
+}
+
+input {
+    width : 4rem;
+    border-style: solid ;
+    border-color: gray ;
+}
+
