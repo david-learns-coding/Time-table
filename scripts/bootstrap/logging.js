@@ -1,1 +1,0 @@
-firebase.analytics().logEvent("Page_visited")
