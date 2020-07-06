@@ -14,6 +14,7 @@ SAVE_BTN.addEventListener("click", () => {
 	}
 
 	localStorage.setItem(CACHE_NAME, JSON.stringify(allData));
+		SAVE_BTN.style.visibility = "hidden";
 
 	
 
@@ -32,7 +33,7 @@ window.addEventListener("load", ()=> {
 
 window.addEventListener("load", () => {
 
-	SAVE_BTN.style.visibility = "hidden"
+	
 	
 	let allData = JSON.parse(localStorage.getItem(CACHE_NAME))
 
