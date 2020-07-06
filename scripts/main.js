@@ -2,7 +2,9 @@ const ALL_ELEMS = document.getElementsByTagName("input");
 
 const CACHE_NAME = "time_table_data";
 
-document.getElementById("save_btn").addEventListener("click", () => {
+const SAVE_BTN = document.getElementById("save_btn")
+
+SAVE_BTN.addEventListener("click", () => {
 	let allData = [];
 
 	for (let elem_num = 0; elem_num < ALL_ELEMS.length; elem_num++) {
@@ -12,6 +14,8 @@ document.getElementById("save_btn").addEventListener("click", () => {
 	}
 
 	localStorage.setItem(CACHE_NAME, JSON.stringify(allData));
+
+	SAVE_BTN.style.visibility = "hidden";
 
 });
 
@@ -28,13 +32,21 @@ window.addEventListener("load", ()=> {
 
 window.addEventListener("load", () => {
 
-    let allData = JSON.parse(localStorage.getItem(CACHE_NAME))
+	SAVE_BTN.style.visibility = "hidden"
+	
+	let allData = JSON.parse(localStorage.getItem(CACHE_NAME))
+
 
 
     for (let elem_num = 0; elem_num < ALL_ELEMS.length; elem_num++) {
 			const element = ALL_ELEMS.item(elem_num);
 
-        element.value = allData[elem_num];
+		element.value = allData[elem_num];
+		element.addEventListener("click", () => {
+			SAVE_BTN.style.visibility = "visible"
+		});
+
+
 		}
 
 })
